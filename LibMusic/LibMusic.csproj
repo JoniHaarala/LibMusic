@@ -16,20 +16,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="catalogo.xaml">
+    <EmbeddedResource Update="Views\catalogo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="login.xaml">
+    <EmbeddedResource Update="Views\login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="profile.xaml">
+    <EmbeddedResource Update="Views\profile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="welcome1.xaml">
+    <EmbeddedResource Update="Views\welcome1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="welcome2.xaml">
+    <EmbeddedResource Update="Views\welcome2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

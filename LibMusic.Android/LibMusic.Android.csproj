@@ -100,7 +100,7 @@
     <AndroidResource Include="Resources\drawable\splashScreen22.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splashScreen-video.mp4" />
+    <AndroidResource Include="Resources\drawable\splashScree_video.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splashScreen2.png" />

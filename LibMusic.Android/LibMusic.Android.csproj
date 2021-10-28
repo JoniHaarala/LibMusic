@@ -97,7 +97,10 @@
     <AndroidResource Include="Resources\drawable\loginBG.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splashScreen2.png" />
+    <AndroidResource Include="Resources\drawable\splashScreen22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splashScreen2.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

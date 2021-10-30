@@ -1,24 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:LibMusic"
              x:Class="LibMusic.MainPage">
 
-    <StackLayout>
-        <Grid>
-            
-            <StackLayout>
-                <CarouselView>
+    <ContentPage.BindingContext>
+        <vm:MainViewModel/>
+    </ContentPage.BindingContext>
 
-                </CarouselView>
-            </StackLayout>
+    <Grid>
+        <Image Source="video_games_bg.jpg" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <BoxView>
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                    <GradientStop Color="Transparent" Offset="0"/>
+                    <GradientStop Color="#262E60" Offset="0.9"/>
+                    <GradientStop Color="#262E60" Offset="1"/>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
 
-            <StackLayout>
-                <CarouselView>
-                    
-                </CarouselView>
+        <Grid RowDefinitions="auto, auto, auto" HeightRequest="280" Margin="30,30,30,100"
+              RowSpacing="40" VerticalOptions="End">
+            <CarouselView x:Name="cvOnboarding" IndicatorView="LandingIndicator" 
+                          ItemsSource="{Binding Onboardings}" VerticalOptions="End">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="10">
+                            <Label Text="{Binding Heading}" TextColor="White" FontSize="24" FontAttributes="Bold" WidthRequest="220" HorizontalOptions="Start"/>
+                            <Label Text="{Binding Caption}" TextColor="White" FontSize="16" WidthRequest="250" HorizontalOptions="Start"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <IndicatorView x:Name="LandingIndicator" Grid.Row="1" IndicatorsShape="Circle" 
+                           IndicatorColor="#EDE1EE" SelectedIndicatorColor="#E014E8"/>
+
+            <StackLayout Grid.Row="2" Spacing="10" Orientation="Horizontal" VerticalOptions="End">
+                
+                <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" HeightRequest="50" WidthRequest="145"
+                        BackgroundColor="#B828BD" TextColor="White" CornerRadius="25" FontAttributes="Bold"/>
+                <Button Text="Registrarse" Command="{Binding RegisterCommand}" HeightRequest="50" WidthRequest="145"
+                        BackgroundColor="#EDE1EE" TextColor="Black" CornerRadius="25" FontAttributes="Bold"/>
+                
             </StackLayout>
-            
         </Grid>
-    </StackLayout>
-
+    </Grid>
+    
 </ContentPage>
